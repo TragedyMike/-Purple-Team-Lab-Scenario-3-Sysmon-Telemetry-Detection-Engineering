@@ -1,0 +1,1 @@
+# -Purple-Team-Lab-Scenario-3-Sysmon-Telemetry-Detection-Engineering
