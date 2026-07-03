@@ -1,6 +1,4 @@
 # 🛡️ Purple Team Lab Scenario 3: Sysmon Telemetry Detection Engineering
-Author: Michael Stromer
- Role: Aspiring SOC Analyst | Detection Engineering | Threat Hunting
 
 📌 Project Overview
 
@@ -229,5 +227,3 @@ The experience reinforced practical skills in detection engineering, log analysi
 Michael Stromer
 
 Aspiring SOC Analyst | Blue Team | Detection Engineering | Threat Hunting
-
-
