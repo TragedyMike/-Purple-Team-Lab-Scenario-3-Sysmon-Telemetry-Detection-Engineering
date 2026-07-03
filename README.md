@@ -1,13 +1,14 @@
-# -Purple-Team-Lab-Scenario-3-Sysmon-Telemetry-Detection-Engineering
-🛡️ Purple Team Lab – Scenario #3: Sysmon Telemetry & Detection Engineering
+# 🛡️ Purple Team Lab Scenario 3: Sysmon Telemetry Detection Engineering
 Author: Michael Stromer
  Role: Aspiring SOC Analyst | Detection Engineering | Threat Hunting
 
 📌 Project Overview
+
 This project focuses on enhancing endpoint visibility by deploying Sysmon (System Monitor) on a Windows Server and integrating it with Wazuh SIEM. The objective was to improve detection capabilities by capturing detailed process, network, and registry telemetry during simulated attack activity.
 Unlike standard Windows event logging, Sysmon provides rich telemetry that enables defenders to detect attacker behavior with greater precision and context. This scenario demonstrates how enhanced endpoint monitoring strengthens detection engineering and forensic investigations.
 
 🎯 Objectives
+
 ⚙️ Install and configure Sysmon on Windows Server
 📡 Forward Sysmon logs to Wazuh SIEM
 🔍 Monitor process creation and command-line execution
@@ -16,6 +17,7 @@ Unlike standard Windows event logging, Sysmon provides rich telemetry that enabl
 📊 Improve forensic visibility of attacker behavior
 
 🖥️ Lab Environment
+
 Component
 Technology
 Attacker Machine
@@ -33,6 +35,7 @@ MITRE ATT&CK
 
 
 ⚙️ Sysmon Deployment
+
 Installing Sysmon
 Sysmon was installed using Microsoft Sysinternals along with a community configuration file to capture detailed endpoint telemetry.
 Sysmon64.exe -accepteula -i sysmonconfig.xml
@@ -75,6 +78,7 @@ or
 Caption: Figure 3. Sysmon Event ID 1 capturing process creation with full command-line visibility.
 
 ⚡ Detection Scenario 2 – PowerShell Activity
+
 PowerShell commands were executed to simulate attacker activity.
 Sysmon captured:
 PowerShell executable
@@ -98,6 +102,7 @@ and/or
 Caption: Figure 4. PowerShell activity detected and logged by Sysmon.
 
 📌 Detection Scenario 3 – Registry Persistence
+
 Persistence was simulated by creating a Run registry key.
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run ^
 /v TestApp ^
@@ -120,6 +125,7 @@ or
 Caption: Figure 5. Registry modification detected, indicating a potential persistence mechanism.
 
 🌐 Detection Scenario 4 – Network Connections
+
 Sysmon monitored outbound network connections associated with running processes.
 Information captured included:
 Source IP
@@ -148,6 +154,7 @@ or
 Caption: Figure 6. Network connection telemetry correlated with process execution.
 
 📊 Detection Summary
+
 Activity
 Sysmon Event ID
 Visibility
@@ -166,6 +173,7 @@ Persistence detection
 
 
 🎯 MITRE ATT&CK Mapping
+
 Technique
 ID
 Command and Scripting Interpreter
@@ -179,6 +187,7 @@ T1547.001
 
 
 🛡️ Key Improvements
+
 Compared to basic Windows event logging, deploying Sysmon significantly enhanced endpoint visibility by providing:
 ✔ Full process command-line logging
 ✔ Parent-child process relationships
@@ -197,11 +206,12 @@ Compared to basic Windows event logging, deploying Sysmon significantly enhanced
 🎯 MITRE ATT&CK Mapping
 
 🚀 Outcome
+
 This lab demonstrated how Sysmon dramatically improves endpoint visibility compared to default Windows logging. By integrating Sysmon with Wazuh SIEM, process execution, PowerShell activity, registry persistence, and network connections were captured in near real time, providing analysts with richer telemetry for threat hunting, incident response, and forensic investigations.
 The experience reinforced practical skills in detection engineering, log analysis, and MITRE ATT&CK mapping while illustrating the value of comprehensive endpoint monitoring in a modern SOC environment.
 
 📸 Recommended Screenshot Checklist
-For a polished GitHub or portfolio notebook, include these screenshots:
+
 ✅ Sysmon installation in PowerShell
 ✅ ossec.conf showing Sysmon configuration
 ✅ Event Viewer – Sysmon Operational log
@@ -215,7 +225,9 @@ For a polished GitHub or portfolio notebook, include these screenshots:
 
 
 👩‍💻 Author
-MIchael Stromer
+
+Michael Stromer
+
 Aspiring SOC Analyst | Blue Team | Detection Engineering | Threat Hunting
 
 
